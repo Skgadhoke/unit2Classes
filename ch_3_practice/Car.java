@@ -9,15 +9,15 @@
 public class Car
 {
     /**fuel efficiency of the car measured in miles per gallon (mpg)*/
-    private int fuelEfficiency;
+    private double fuelEfficiency;
     
     /** amount of fuel in gas tank measured in gallons*/
-    private int fuelInTank;
+    private double fuelInTank;
 
     /**
      * Constructor that specifies the fuel efficiency of this car
      */
-    public Car(int efficiency)
+    public Car(double efficiency)
     {
         // initialise instance variables
         this.fuelEfficiency = efficiency;
@@ -47,8 +47,9 @@ public class Car
     public void drive(int miles)
     {
         // put your code here
-        
-   }
+        double gallonsBurned = miles / this.fuelEfficiency; 
+        this.fuelInTank = this.fuelInTank - gallonsBurned;
+ }
        /**
      * adds the specified am\ount of gas in gallons to this car's tank
      * 
@@ -56,10 +57,10 @@ public class Car
      * 
      * @param   gallons number of gallons of gas to add to this car's tank
  */
-public void a(int y)
+public void addGas(int gallons)
     {
         // put your code here
-        
+        this.fuelInTank = this.fuelInTank + gallons;
     }
            /**
      * Returns ht enumber of gallons of gas remaining in this car's tank
@@ -69,7 +70,7 @@ public void a(int y)
 public double getGasInTank()
     {
         // put your code here
-        return 0;
+        return fuelInTank;
     }
 
 }
