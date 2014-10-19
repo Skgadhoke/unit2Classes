@@ -51,20 +51,14 @@ class Bird
     {	
         try {
             
-            System.out.println("===========111======"+new File(".").getAbsolutePath());
-        	File file = new File((new File(".").getAbsolutePath()) +"/images/bird.png");
-
-        	//File file = new File("/home/simarpreet/Desktop/Simar/javaprojects/CityScape/images/bigbird.png");
+            File file = new File((new File(".").getAbsolutePath()) +"/images/bird.png");
         	BufferedImage image = ImageIO.read(file);        	
         	BufferedImageOp op = null;        	
         	g2.drawImage(image, op, x, y);
         	
-        	
         } catch (Exception e) {
         	e.printStackTrace();	
-        }
-        
-        
+        }        
     }
 }
 
