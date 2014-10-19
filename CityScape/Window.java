@@ -2,7 +2,12 @@ import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
-
+/**
+ * 
+ *Window Class
+ * @author Simar
+ *
+ */
 public class Window {
     
     //member variables of window
@@ -24,7 +29,7 @@ public class Window {
     //color of the window
     Color colWin = new Color(20,20,20);
     
-    //constructor
+    //constructor class takes in 4 paramters of type int
     public Window(int xWin, int yWin, int wWin, int hWin)
     {
         this.xWin = xWin;
@@ -49,6 +54,7 @@ public class Window {
         this.hWin = h;
     }
     
+    //methods for getting the positions and the dimensions of the window
     public int getWindowHeight()
     {
         return this.hWin;
@@ -63,18 +69,21 @@ public class Window {
     {
         this.xWin = w;
     }
-    
-    //methods for setting the color of the windows
+        
+    /**
+     * @param type Color window color
+     */
     public void setWinColor(Color colWin)
     {
         this.colWin = colWin;
     }
-    
+    /**
+     * @param type boolean window filled or not
+     */
     public void setWinFill(boolean windowFill)
     {
         this.windowFill = windowFill;
     }
-    
     //draws the windows
     public void draw(Graphics2D g2)
         {
@@ -100,15 +109,6 @@ public class Window {
             g2.setColor(lineWin);
             
             g2.drawLine(x1,y1,x2,y2);
-            //System.out.println(x1+" "+y1);
-            
-            }
-        
+       }
     }
-
-
-
-
-
-
 }

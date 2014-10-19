@@ -3,7 +3,11 @@ import java.awt.Graphics2D;
 import java.awt.geom.*;
 import java.awt.Rectangle;
 import java.awt.Polygon;
-
+/**
+ * Car Class
+ * @author Simar
+ *
+ */
 public class Car 
 {
     // declarations for the main body of the car

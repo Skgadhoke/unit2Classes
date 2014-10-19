@@ -1,43 +1,51 @@
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
-import java.awt.Polygon;
 import java.util.Random;
 
+/**
+ * Skyline Class
+ *   
+ * @author Simar
+ *
+ */
 public class Skyline {
-	
+	// assigning car object variables
 	int width = 110;
 	int height = 400;
 	int buildingDis = 50;
 	int xCar = 700;
 	int xCar2 = -5;
 	
+	// assigning building block object variables
 	int x=5;
 	int y=350;
 	int w=100;
 	int h=300;
 	
+	// assigning Car object variables
 	int birdX=-50; 
     int birdY=50;
-    int birdW=100;
-    int birdH=50;
-	
+ 	
 	int w2 = w;
 	int x2 = x;
+	
+	// create random object so the colors changed randomly
 	Random randGenerator= new Random ();
 	
 	int r = randGenerator.nextInt(255);
 	int g = randGenerator.nextInt(255);
 	int b = randGenerator.nextInt(255);
+	
 	int count =0;
 	
 	Color bCol = new Color(r,g,b);
 	Color Col = new Color(r,g,b);
 	
 	public Skyline() {
-		//this.xCar =xCar;
+		
 	}
-	
+	// draws building blocks, cars, birds
 	public void draw(Graphics2D g2)
 	{	
 		Rectangle Bakground = new Rectangle(0,0,1000,1000);
@@ -109,7 +117,7 @@ public class Skyline {
 		int g = randGenerator.nextInt(255);
 		int b = randGenerator.nextInt(255);
 		
-		
+		// creating cars
 		Color carCol = new Color (r,g,b);
 		
 		Car car2 = new Car(CityScapeViewer.xCar2,560, 200,70);
@@ -124,17 +132,8 @@ public class Skyline {
 		
 		car.draw(g2);
 		
-		
-		 Color birdCol = new Color(r,g, 200);
-	        
-	     Bird bird = new Bird(CityScapeViewer.birdX, CityScapeViewer.birdY, birdW, birdH);
-	     bird.setBirdColor(birdCol);
-	     bird.setBirdFill(true);
+		// creating bird
+	     Bird bird = new Bird(CityScapeViewer.birdX, CityScapeViewer.birdY);
 	     bird.draw(g2);
-		
-		
-		
-		
-		
 	}
 }

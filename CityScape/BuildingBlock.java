@@ -4,7 +4,11 @@ import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.util.Random;
 
-
+/**
+ * BuildingBlocks which will create my rectangle blocks
+ * @author Simar
+ *
+ */
 public class BuildingBlock
 {
     
@@ -33,11 +37,16 @@ public class BuildingBlock
     Color color = new Color(r,g,b);
     Window winBlock = null;
     
-    
+    /**
+     * initalizes member variables and it checks whether windows and door are present
+     * @param takes an int width
+     * @param takes an int height
+     * @param takes a boolean isWin
+     * @param takes a boolean hasDoor
+     * 
+     */
     public BuildingBlock(int w, int h, boolean isWin, boolean hasDoor )
     {
-        //this.blockX = xPos;
-        //this.blockY = yPos;
         this.blockW = w;
         this.blockH = h;
         this.winPresent = isWin;
@@ -55,11 +64,11 @@ public class BuildingBlock
         
     }
     
-    
+    /**
+     * Creates my windows and door 
+     */
     private void createWindow()
     {
-        //find x,y,w,h of window and set other attribute
-        
         int dis = 10;        
         int xWin = this.blockX + dis;
         int yWin = this.blockY + this.blockH-dis;
@@ -70,36 +79,45 @@ public class BuildingBlock
         }
         
         winBlock = new Window(xWin, yWin, 10,10);
-    }
-    
+    }    
+    /**
+     * @param takes an int width
+     * @param takes an int height
+     * overloaded constructor that allows to take 2 parameters instead of 4
+     */
     public BuildingBlock(int w, int h)
     {
         this.blockW = w;
         this.blockH = h;
         this.winPresent= false;
         this.doorPresent = false;
-    }
-    
-    
-    //methods for setting the positions and dimensions of the block
-    
+    }    
+    /**
+     * methods for setting the positions
+     * @param xPos
+     * @param yPos
+     */
     public void setLocation(int xPos, int yPos)
     {
         this.blockX = xPos;
         this.blockY = yPos;
-    }
-    
+    }    
+    /**
+     * set block
+     * @param wPos
+     */
     public void setBlockW(int wPos)
     {
         this.blockW = wPos;
     }
-    
+    /**
+     * 
+     * @param hPos
+     */
     public void setBlockH(int hPos)
     {
         this.blockH = hPos;
     }
-    
-    
     //methods for setting attributes of the building blocks
     public void setColor(Color col)
     {
@@ -109,8 +127,7 @@ public class BuildingBlock
     public void setBlockFill(boolean fill)
     {
         this.fillBlock = fill;
-    }
-    
+    }    
     //draws building blocks
     public void drawBlocks(Graphics2D g2)
     {
@@ -162,8 +179,5 @@ public class BuildingBlock
                 
             }
         }
-    
     }
-
-
 }

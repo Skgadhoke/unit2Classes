@@ -1,13 +1,20 @@
 import javax.swing.JFrame;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+/**
+ * driver class
+ * 
+ * @author Simar
+ *
+ */
 public class CityScapeViewer
 {
 	public static int xCar = 700;
 	public static int xCar2 = -5;
 	public static int birdX = -50;
 	public static int birdY=50;
+    
     /**
-     * main method for the program which creates and configures the frame for the program
+     * main method
+     * @param args
      */
     public static void main(String[] args)
     {
